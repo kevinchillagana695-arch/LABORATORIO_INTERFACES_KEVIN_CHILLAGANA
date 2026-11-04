@@ -1,0 +1,723 @@
+
+/* Variables CSS */
+
+:root {
+    --colorUno: #ffffff;
+    --colorDos: #ffffff;
+    --colorTres: #DDEBCF;
+    --colorCuatro: #f4f7f0;
+    --colorCinco: #DEC9AC;
+    --colorSeis: #E3F1E1;
+    --colorTexto: #333333;
+    --colorAccent: #6B8A5A;
+
+    --fuentePrincipal: "Roboto", sans-serif;
+    --fuenteSecundaria: "Lato", sans-serif;
+
+    --espacioSeccion: 65px;
+}
+
+
+/* General styles for the document HTML */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--colorUno);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorTexto);
+    background-color: var(--colorUno);
+    margin: 0;
+}
+
+
+/* Styles for containers */
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* General styles for images */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Section Navbar */
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 25px 0;
+    background-color: var(--colorUno);
+    border-bottom: 10px solid var(--colorSeis);
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar__img-logo {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar__titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__logo {
+    font-family: var(--fuentePrincipal);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--colorTexto);
+    margin: 0;
+}
+
+.navbar__logo--primary {
+    color: var(--colorTexto);
+    font-weight: 300;
+}
+
+.navbar__subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+.navbar__container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar__container ul li a {
+    font-family: var(--fuentePrincipal);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--colorTexto);
+    text-decoration: none;
+}
+
+.navbar__container ul li a:hover {
+    color: var(--colorAccent);
+}
+
+.navbar__container ul li a.btn-login {
+    background-color: var(--colorTres);
+    padding: 12px 28px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar__container ul li a.btn-login:hover {
+    background-color: var(--colorAccent);
+    color: white;
+}
+
+
+/* Section Main */
+
+main {
+    background-color: var(--colorUno);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 60px 20px 75px;
+}
+
+.hero__text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero__text h2 {
+    font-family: var(--fuentePrincipal);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+}
+
+.hero__img {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero__img img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+
+/* Section About */
+
+.sobre-nosotros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: var(--espacioSeccion) 40px;
+    border-top: 10px solid var(--colorSeis);
+}
+
+.about {
+    flex: 1;
+    min-width: 0;
+}
+
+.about__container {
+    width: 100%;
+}
+
+/* Título */
+
+.about__title {
+    font-family: var(--fuentePrincipal);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--colorTexto);
+    text-align: center;
+    margin: 0 0 35px;
+}
+
+/* Párrafos */
+
+.about__texto {
+    font-family: var(--fuenteSecundaria);
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+    margin: 0 0 20px;
+}
+
+.about__texto:last-child {
+    margin-bottom: 0;
+}
+
+/* Imagen */
+
+.about__imagen {
+    width: 42%;
+    flex-shrink: 0;
+}
+
+.about__imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Section Instructions */
+
+.instrucciones {
+    border-top: 10px solid var(--colorSeis);
+    padding: var(--espacioSeccion) 40px;
+}
+
+/* Título */
+
+.instrucciones__title {
+    font-family: var(--fuentePrincipal);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--colorTexto);
+    text-align: left;
+    margin: 0 0 35px;
+}
+
+/* Contenedor de tarjetas */
+
+.instrucciones__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        "uno tres"
+        "dos cuatro";
+    gap: 20px;
+}
+
+/* Tarjetas */
+
+.paso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 25px;
+    min-height: 110px;
+    background-color: #f4f1e5;
+    border-radius: 10px;
+}
+
+.paso--uno {
+    grid-area: uno;
+}
+
+.paso--dos {
+    grid-area: dos;
+}
+
+.paso--tres {
+    grid-area: tres;
+}
+
+.paso--cuatro {
+    grid-area: cuatro;
+}
+
+/* Número del paso */
+
+.paso__numero {
+    font-family: var(--fuentePrincipal);
+    font-size: 18px;
+    font-weight: 700;
+    color: #808080;
+}
+
+/* Descripción del paso */
+
+.paso p {
+    font-family: var(--fuenteSecundaria);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--colorTexto);
+    margin: 10px 0 0;
+}
+
+
+/* Section Calculator */
+
+.calculadora {
+    border-top: 10px solid var(--colorSeis);
+    padding: var(--espacioSeccion) 40px;
+}
+
+/* Título */
+
+.calculadora__title {
+    font-family: var(--fuentePrincipal);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--colorTexto);
+    text-align: center;
+    margin: 0 0 55px;
+}
+
+/* Formulario */
+
+.calculadora__formulario {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Contenedor de los campos */
+
+.calculadora__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 35px;
+}
+
+/* Cada campo */
+
+.calculadora__campo {
+    display: grid;
+    grid-template-columns: 135px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+}
+
+/* Etiquetas */
+
+.calculadora__campo label {
+    font-family: var(--fuentePrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--colorTexto);
+    line-height: 1.4;
+}
+
+/* Entradas */
+
+.calculadora__campo input,
+.calculadora__campo select,
+.calculadora__campo textarea {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--colorTres);
+    color: var(--colorTexto);
+    font-family: var(--fuenteSecundaria);
+    font-size: 14px;
+}
+
+/* Texto de ejemplo */
+
+.calculadora__campo input::placeholder,
+.calculadora__campo textarea::placeholder {
+    color: #9aab87;
+}
+
+/* Caja de descripción fija */
+
+.calculadora__campo textarea {
+    height: 42px;
+    resize: none;
+    overflow-y: auto;
+}
+
+/* Efecto al seleccionar */
+
+.calculadora__campo input:focus,
+.calculadora__campo select:focus,
+.calculadora__campo textarea:focus {
+    outline: 2px solid var(--colorAccent);
+}
+
+/* Botón calcular */
+
+.calculadora__boton {
+    background-color: var(--colorCinco);
+    color: var(--colorTexto);
+    border: none;
+    border-radius: 6px;
+    padding: 14px 45px;
+    margin-top: 50px;
+    font-family: var(--fuentePrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculadora__boton:hover {
+    background-color: #c9ad86;
+}
+
+
+/* Section Results */
+
+.resultados {
+    border-top: 10px solid var(--colorSeis);
+    border-bottom: 10px solid var(--colorSeis);
+    padding: var(--espacioSeccion) 40px;
+}
+
+/* Tarjeta principal */
+
+.resultados__card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: var(--colorUno);
+}
+
+/* Título */
+
+.resultados__title {
+    font-family: var(--fuentePrincipal);
+    font-size: 28px;
+    font-weight: 700;
+    color: #777;
+    margin: 0 0 30px;
+}
+
+/* Tarifa sugerida */
+
+.resultados__tarifa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    background-color: var(--colorSeis);
+    font-size: 20px;
+}
+
+.resultados__tarifa strong {
+    font-weight: 700;
+    color: #000;
+}
+
+/* Base y costos */
+
+.resultados__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.resultados__detalle {
+    background-color: #dedede;
+    padding: 25px 30px;
+    border-radius: 8px;
+}
+
+.resultados__detalle h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 12px;
+}
+
+.resultados__detalle strong {
+    font-size: 20px;
+    color: #000;
+}
+
+/* Detalles adicionales */
+
+.resultados__texto {
+    font-family: var(--fuenteSecundaria);
+    font-size: 14px;
+    color: #777;
+    margin: 35px 0 0;
+}
+
+.resultados__informacion {
+    margin-top: 30px;
+}
+
+.resultados__informacion h3 {
+    font-size: 16px;
+    color: #666;
+}
+
+.resultados__informacion p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 767px) {
+
+    /* Navbar */
+
+    .navbar__container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .navbar__brand {
+        justify-content: center;
+    }
+
+    .navbar__img-logo {
+        height: 90px;
+    }
+
+    .navbar__container ul {
+        gap: 15px;
+    }
+
+    .navbar__container ul li a {
+        font-size: 14px;
+    }
+
+    /* Main */
+
+    .hero {
+        padding: 40px 15px 50px;
+        gap: 25px;
+    }
+
+    .hero__text h2 {
+        font-size: 20px;
+    }
+
+    .hero__img {
+        max-width: 400px;
+    }
+
+    /* About */
+
+    .sobre-nosotros {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .about__title {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .about__texto {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .about__imagen {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Instructions */
+
+    .instrucciones {
+        padding: 40px 20px;
+    }
+
+    .instrucciones__title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .instrucciones__container {
+        gap: 12px;
+    }
+
+    .paso {
+        padding: 15px;
+        min-height: 95px;
+    }
+
+    .paso__numero {
+        font-size: 15px;
+    }
+
+    .paso p {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    /* Calculator */
+
+    .calculadora {
+        padding: 40px 20px;
+    }
+
+    .calculadora__title {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .calculadora__container {
+        gap: 15px;
+    }
+
+    .calculadora__campo {
+        grid-template-columns: 75px minmax(0, 1fr);
+        gap: 7px;
+    }
+
+    .calculadora__campo label {
+        font-size: 11px;
+    }
+
+    .calculadora__campo input,
+    .calculadora__campo select,
+    .calculadora__campo textarea {
+        height: 32px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .calculadora__campo textarea {
+        height: 32px;
+        resize: none;
+    }
+
+    .calculadora__boton {
+        margin-top: 35px;
+        padding: 12px 35px;
+        font-size: 12px;
+    }
+
+    /* Results */
+
+    .resultados {
+        padding: 40px 20px;
+    }
+
+    .resultados__card {
+        padding: 25px 20px;
+    }
+
+    .resultados__title {
+        font-size: 24px;
+    }
+
+    .resultados__tarifa {
+        padding: 20px;
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+
+    .resultados__container {
+        grid-template-columns: 1fr;
+    }
+
+    .resultados__detalle {
+        padding: 20px;
+    }
+}
+
+
+/* Very small screens */
+
+@media (max-width: 380px) {
+
+    .instrucciones__container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "uno"
+            "dos"
+            "tres"
+            "cuatro";
+    }
+
+    .calculadora__container {
+        grid-template-columns: 1fr;
+    }
+
+    .calculadora__campo {
+        grid-template-columns: 100px minmax(0, 1fr);
+    }
+}
